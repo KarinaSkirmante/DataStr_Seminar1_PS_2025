@@ -50,7 +50,27 @@ public class MyList {
 		return counter;
 	}
 	
-	
+	private void resize() {
+		//garais if-else
+		/*if(counter < 100) {
+			size = size * 2;
+		}
+		else
+		{
+			size = (int)(size * 1.5);
+		}
+		*/
+		//īsais if-else
+		size = (counter < 100) ? size * 2 : (int)(size * 1.5);
+		char[] listNew = new char[size];
+		
+		for(int i = 0; i < counter; i++) {
+			listNew[i] = list[i];
+		}
+		list = listNew;
+		System.gc();//izsaucam atkritumu savācēju, kas izdzēsīs mazā masīva elementus
+		
+	}
 	
 	
 	
