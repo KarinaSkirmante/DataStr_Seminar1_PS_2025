@@ -72,7 +72,38 @@ public class MyList {
 		
 	}
 	
+	public void add(char element) {
+		if(isFull()) {
+			resize();
+		}
+		
+		//garais pieraksts
+		list[counter] = element;
+		counter++;
+		
+		//īsais pieraksts
+		//list[counter++] = element;
+	}
 	
+	public void add(char element, int index) {
+		if(index < 0 || index > counter)
+		{
+			//TODO izmest izņēmumu, jo index nav pareizs
+		}
+		else
+		{
+			if(isFull()) {
+				resize();
+			}
+			
+			for(int i = counter; i >= index; i--) {
+				list[i+1] = list[i];
+			}
+			list[index] = element;
+			counter++;
+			
+		}
+	}
 	
 	
 	
