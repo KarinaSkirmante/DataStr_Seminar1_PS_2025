@@ -21,5 +21,41 @@ public class MyList {
 		list = new char[size];	
 	}
 	
+	public boolean isFull()
+	{
+		//garais if-else
+		/*if(counter == size) {
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		*/
+		
+		//īso if-else
+		//return (counter == size) ? true : false;
+		
+		
+		//īsā forma priekš true/false
+		return (counter == size);
+		
+	}
+	
+	public boolean isEmpty() {
+		return (counter == 0);
+	}
+	
+	public int howManyElements() {
+		return counter;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
