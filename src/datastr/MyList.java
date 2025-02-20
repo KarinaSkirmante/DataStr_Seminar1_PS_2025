@@ -150,6 +150,28 @@ public class MyList {
 
 	}
 	
+	//funkcijas deklarācija
+	public boolean search(char element) throws Exception {
+		//parbaude par isEmpty
+		if(isEmpty())
+		{
+			Exception myException = new Exception("Saraksts ir tukšs, tāpēc nevar meklēt elementus");
+			throw myException;
+		}
+		
+		//ar fotr ciklu iet cauri visiem elementiem un salīdzināt ar padoto elementu
+		//un ja sakrīt, tad var atgriezt true
+		for(int i = 0; i < counter; i++) {
+			if(list[i] == element) {
+				return true;
+			}
+		}
+		return false;
+	
+	}
+
+	//TODO Izveidot funkciju, kas kā argumentu saņem elementu un atgriež nākamo elementu (veikt nepieciešamās pārbaudes);\
+	
 	
 	
 
