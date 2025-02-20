@@ -97,7 +97,7 @@ public class MyList {
 				resize();
 			}
 			
-			for(int i = counter; i >= index; i--) {
+			for(int i = counter-1; i >= index; i--) {
 				list[i+1] = list[i];
 			}
 			list[index] = element;
@@ -188,7 +188,7 @@ public class MyList {
 			{
 				for(int i = 0; i < counter; i++) {
 					for(int j = 0; j < counter; j++) {
-						if(list[i] > list[j])
+						if(list[i] < list[j])
 						{
 							swap(i,j);
 						}
@@ -201,7 +201,7 @@ public class MyList {
 			else if (sortingType.equalsIgnoreCase("desc")){
 				for(int i = 0; i < counter; i++) {
 					for(int j = 0; j < counter; j++) {
-						if(list[i] < list[j])
+						if(list[i] > list[j])
 						{
 							swap(i,j);
 						}
@@ -238,7 +238,7 @@ public class MyList {
 		//pārbaudi uz isEmpty
 		if(isEmpty())
 		{
-			Exception myException = new Exception("Saraksts ir tukšs, tāpēc nevar veikt kārtošanu");
+			Exception myException = new Exception("Saraksts ir tukšs, tāpēc nevar veikt printēšanu");
 			throw myException;
 		}
 		
