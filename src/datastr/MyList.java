@@ -199,6 +199,14 @@ public class MyList {
 				
 			}
 			else if (sortingType.equalsIgnoreCase("desc")){
+				for(int i = 0; i < counter; i++) {
+					for(int j = 0; j < counter; j++) {
+						if(list[i] < list[j])
+						{
+							swap(i,j);
+						}
+					}
+				}
 				
 			}
 			
@@ -216,6 +224,16 @@ public class MyList {
 		
 		
 	}
+	
+	private void swap(int index1, int index2) {
+		char temp = list[index1];
+		list[index1] = list[index2];
+		list[index2] = temp;	
+	}
+	
+	
+	
+	
 	
 
 }
