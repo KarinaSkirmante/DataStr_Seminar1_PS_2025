@@ -122,9 +122,7 @@ public class MyList {
 			throw myException;
 		}
 		
-
 	//veikt kopēsanu pa vienu iedaļu uz kreiso pusei sākot no dzēstā indeksa
-		
 		for(int i = index; i < counter-1; i++) {
 			list[i] = list[i+1];
 		}
@@ -133,6 +131,25 @@ public class MyList {
 	//samzaināt counter par 1
 		counter--;
 	}
+	
+	//funkcijas deklaracija
+	public char get(int index) throws Exception {
+		//parbaude par isEmpty
+		if(isEmpty())
+		{
+			Exception myException = new Exception("Saraksts ir tukšs, tāpēc nevar piekļūt elementiem");
+			throw myException;
+		}
+		//parbaude par indeksu, ko lietotājs padod
+		if(index < 0 || index >= counter) {
+			Exception myException = new Exception("Jūsu index nav atbilstošs");
+			throw myException;
+		}
+		//atgriezt elemtnu, kas atrodas index šūnā
+		return list[index];
+
+	}
+	
 	
 	
 
