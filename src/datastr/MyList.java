@@ -85,10 +85,11 @@ public class MyList {
 		//list[counter++] = element;
 	}
 	
-	public void add(char element, int index) {
+	public void add(char element, int index) throws Exception {
 		if(index < 0 || index > counter)
 		{
-			//TODO izmest izņēmumu, jo index nav pareizs
+			Exception myException = new Exception("Jūsu index nav atbilstošs");
+			throw myException;
 		}
 		else
 		{
