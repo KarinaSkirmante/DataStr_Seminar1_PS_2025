@@ -106,7 +106,33 @@ public class MyList {
 		}
 	}
 	
-	
+	//funkcijas deklarācija
+	public void remove(int index) throws Exception
+	{
+		//parbaude, vai sarakstā ir elementi, ko dzēst
+		if(isEmpty())
+		{
+			Exception myException = new Exception("Saraksts ir tukšs, tāpēc nevar neko izdzēst");
+			throw myException;
+		}
+
+		//parbaude uz indeksu - cik pareizs tas ir
+		if(index < 0 || index >= counter) {
+			Exception myException = new Exception("Jūsu index nav atbilstošs");
+			throw myException;
+		}
+		
+
+	//veikt kopēsanu pa vienu iedaļu uz kreiso pusei sākot no dzēstā indeksa
+		
+		for(int i = index; i < counter-1; i++) {
+			list[i] = list[i+1];
+		}
+	//pēdedje aizņemta šuna jaaizpili ar noklusejuma vērtību ' '
+		list[counter-1] = ' ';
+	//samzaināt counter par 1
+		counter--;
+	}
 	
 	
 
