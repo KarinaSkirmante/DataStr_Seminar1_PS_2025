@@ -37,6 +37,14 @@ public class MainService {
 			System.out.println(e);
 		}
 
+		/*
+		MyList listForInt = new MyList();
+		listForInt.add(2);
+		listForInt.add(100);
+		*/
+		
+		
+		
 	}
 
 }
