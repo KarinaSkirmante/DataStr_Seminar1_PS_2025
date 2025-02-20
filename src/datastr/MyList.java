@@ -172,7 +172,50 @@ public class MyList {
 
 	//TODO Izveidot funkciju, kas kā argumentu saņem elementu un atgriež nākamo elementu (veikt nepieciešamās pārbaudes);\
 	
-	
+	public void sort(String sortingType) throws Exception {
+		//parbaude par isEmpty
+		if(isEmpty())
+		{
+			Exception myException = new Exception("Saraksts ir tukšs, tāpēc nevar veikt kārtošanu");
+			throw myException;
+		}
+		
+		if(sortingType != null && (sortingType.equalsIgnoreCase("asc") 
+				||  (sortingType.equalsIgnoreCase("desc"))))
+		{
+			
+			if(sortingType.equalsIgnoreCase("asc"))
+			{
+				for(int i = 0; i < counter; i++) {
+					for(int j = 0; j < counter; j++) {
+						if(list[i] > list[j])
+						{
+							swap(i,j);
+						}
+					}
+				}
+				
+				
+				
+			}
+			else if (sortingType.equalsIgnoreCase("desc")){
+				
+			}
+			
+			
+			
+		}
+		else
+		{
+			Exception myException = new Exception("Kārtošanas parametrs nav atbilstošs");
+			throw myException;
+
+		}
+		
+		
+		
+		
+	}
 	
 
 }
