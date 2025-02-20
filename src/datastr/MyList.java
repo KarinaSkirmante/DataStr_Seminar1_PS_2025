@@ -230,7 +230,34 @@ public class MyList {
 		list[index1] = list[index2];
 		list[index2] = temp;	
 	}
+
 	
+	//funkciajs deklaracija
+	public void print() throws Exception
+	{
+		//pārbaudi uz isEmpty
+		if(isEmpty())
+		{
+			Exception myException = new Exception("Saraksts ir tukšs, tāpēc nevar veikt kārtošanu");
+			throw myException;
+		}
+		
+		for(int i = 0; i < counter ; i++) {
+			System.out.print(list[i] + " ");
+		}
+		System.out.println();
+		
+		
+	}
+	
+	public void makeEmpty() {
+		if(!isEmpty()) {
+			size = DEFAULT_SIZE;
+			counter = 0;
+			list = new char[size];
+			System.gc();
+		}
+	}
 	
 	
 	
